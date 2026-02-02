@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driveup Rijschool</title>
+<style>
+:root{
+  --blue:#149ed9;
+  --orange:#ffb400;
+  --text:#0b0b0b;
+}
+
+/* Algemene styling */
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f0f0f0;
+  color:var(--text);
+}
+
+/* TOPBAR */
+.topbar{
+  background:#000;
+  color:#fff;
+  font-size:14px;
+  padding:10px 40px;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 40px;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:1000;
+}
+
+.logo img{
+  height:160px;
+  width:auto;
+}
+
+nav a{
+  margin-left:26px;
+  text-decoration:none;
+  font-weight:700;
+  color:#000;
+}
+
+.nav-cta{
+  background:var(--orange);
+  padding:12px 18px;
+  border-radius:6px;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  min-height:650px;
+  background: linear-gradient(135deg, var(--blue), var(--orange));
+  color:#fff;
+}
+
+.hero-left{
+  padding:90px 60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-left h1{
+  font-size:54px;
+  line-height:1.05;
+  margin-bottom:26px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.hero-left ul{
+  list-style:none;
+  padding:0;
+  margin-bottom:36px;
+}
+.hero-left li{
+  margin-bottom:12px;
+  font-size:18px;
+}
+
+.buttons{
+  display:flex;
+  gap:18px;
+  margin-bottom:36px;
+}
+
+.btn-main{
+  background:#fff;
+  color:#000;
+  padding:16px 24px;
+  font-weight:900;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.btn-alt{
+  background:var(--orange);
+  color:#000;
+  padding:16px 24px;
+  font-weight:900;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.hero-info p{
+  margin:6px 0;
+  font-size:18px;
+  font-weight:700;
+}
+
+.hero-info .contact{
+  margin-top:14px;
+  display:flex;
+  gap:22px;
+}
+
+.hero-right{
+  background: url("images/achtergrond.jpg") center/cover no-repeat;
+}
+
+/* TABS */
+.tabs-container{
+  max-width:1000px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+.tabs-header{
+  display:flex;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.tab-btn{
+  padding:12px 24px;
+  background:#eee;
+  border:none;
+  border-radius:6px 6px 0 0;
+  cursor:pointer;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.tab-btn.active{
+  background:var(--orange);
+  color:#000;
+}
+
+.tab-content{
+  display:none;
+  background:#fff;
+  padding:30px;
+  border-radius:0 12px 12px 12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tab-content.active{
+  display:block;
+}
+
+.tab-content h2{
+  color:var(--blue);
+  margin-bottom:20px;
+}
+
+.tab-content p, .tab-content li{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.tab-content ul{
+  list-style:none;
+  padding-left:0;
+}
+
+.tab-content table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+
+.tab-content th, .tab-content td{
+  border:1px solid #ddd;
+  padding:10px;
+  text-align:left;
+}
+
+.tab-content th{
+  background:var(--blue);
+  color:#fff;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  nav a{margin-left:12px; display:block; margin-top:8px;}
+  .buttons{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>⭐ Beoordeeld met een 9,4</span>
+  <span>📞 06 28 668 179 · 📧 rijschool.driveup@gmail.com</span>
+</div>
+
+<header>
+  <div class="logo">
+    <img src="images/driveup-car-logo.png" alt="Driveup">
+  </div>
+
+  <nav>
+    <a href="#autorijles">Autorijles</a>
+    <a href="#tabs">Over ons / Tarieven</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cta" href="#proefles">Gratis proefles</a>
+  </nav>
+</header>
+
+<section class="hero" id="autorijles">
+  <div class="hero-left">
+    <h1>
+      Rijschool<br>
+      die staat voor<br>
+      kwaliteit
+    </h1>
+
+    <ul>
+      <li>✔ Rijschool Gorinchem & omgeving</li>
+      <li>✔ Geen wachttijden</li>
+      <li>✔ Persoonlijke begeleiding</li>
+      <li>✔ Professionele instructeur</li>
+    </ul>
+
+    <div class="buttons">
+      <a class="btn-main" href="#proefles">Gratis proefles</a>
+      <a class="btn-alt" href="#tabs">Bekijk pakketten</a>
+    </div>
+
+    <div class="hero-info">
+      <p>Eerste proefles GRATIS!</p>
+      <div class="contact">
+        <a href="tel:0628668179">📞 06 28 668 179</a>
+        <a href="https://instagram.com/driveup" target="_blank">📸 @driveup</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right"></div>
+</section>
+
+<!-- TABS -->
+<section class="tabs-container" id="tabs">
+  <div class="tabs-header">
+    <button class="tab-btn active" data-tab="over-ons">Over ons</button>
+    <button class="tab-btn" data-tab="tarieven">Tarieven</button>
+  </div>
+
+  <div class="tab-content active" id="over-ons">
+    <h2>Over ons</h2>
+    <p>Ik ben een geduldige rijinstructeur die staat voor kwaliteit en persoonlijke begeleiding. Bij mij krijg je rijlessen die volledig zijn afgestemd op jouw tempo en niveau, in een rustige en prettige sfeer. Zo leer je veilig, zelfverzekerd en met vertrouwen autorijden.</p>
+    <p>Ook als je last hebt van faalangst of spanning achter het stuur, ben je bij mij aan het juiste adres. Met duidelijke uitleg, rust en persoonlijke aandacht zorgen we samen voor vooruitgang.</p>
+    <p>Mijn doel is simpel: jou succesvol en met een goed gevoel laten slagen voor je rijbewijs. Betrouwbaar, professioneel en resultaatgericht – dát is mijn rijschool.</p>
+    <p>Klaar om te starten? Neem gerust contact op en plan je eerste rijles. 🚗💪</p>
+  </div>
+
+  <div class="tab-content" id="tarieven">
+    <h2>Tarieven</h2>
+    <p>Rijlessen in Gorinchem en omgeving.</p>
+    <ul>
+      <li>✅ Elke rijles duurt 50 minuten</li>
+      <li>✅ Meer lessen = lagere prijs per les</li>
+      <li>✅ Alle pakketten zijn zonder praktijkexamen</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Pakket</th>
+          <th>Aantal lessen</th>
+          <th>Prijs per les</th>
+          <th>Totaal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🟢 Basis</td>
+          <td>10</td>
+          <td>€50</td>
+          <td>€500</td>
+        </tr>
+        <tr>
+          <td>🔵 Start</td>
+          <td>20</td>
+          <td>€50</td>
+          <td>€1.000</td>
+        </tr>
+        <tr>
+          <td>🔴 Compleet ⭐</td>
+          <td>40</td>
+          <td>€45</td>
+          <td>€1.800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Los bij te boeken:</strong></p>
+    <ul>
+      <li>Losse rijles (50 min) → €50</li>
+      <li>Proefles (50 min) → €45</li>
+      <li>Praktijkexamen → apart bij te boeken</li>
+      <li>Betalen in termijnen mogelijk</li>
+    </ul>
+    <p>👉 Plan direct je proefles of stuur een WhatsApp om te starten!</p>
+  </div>
+</section>
+
+<script>
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    tabButtons.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const target = btn.dataset.tab;
+    tabContents.forEach(tc=>{
+      if(tc.id === target) tc.classList.add('active');
+      else tc.classList.remove('active');
+    });
+  });
+});
+</script>
+
+</body>
+</html>
